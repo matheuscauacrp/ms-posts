@@ -1,5 +1,6 @@
 package com.microservicos.posts.controladores;
 
+import com.microservicos.posts.modelos.entidades.EmpresaPost;
 import com.microservicos.posts.modelos.entidades.Post;
 import com.microservicos.posts.servicos.PostServico;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,12 @@ public class PostControlador {
     @PostMapping("/criar")
     public ResponseEntity<Post> criarPost(@RequestBody Post post){
         postServico.criarPost(post);
+        return ResponseEntity.status(201).build();
+    }
+
+    @PostMapping("/criarEmpresa")
+    public ResponseEntity criarEmpresa(@RequestBody EmpresaPost empresaPost){
+        postServico.criarEmpresaPost(empresaPost);
         return ResponseEntity.status(201).build();
     }
 

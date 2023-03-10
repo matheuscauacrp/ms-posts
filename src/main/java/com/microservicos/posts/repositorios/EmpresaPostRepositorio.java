@@ -1,0 +1,13 @@
+package com.microservicos.posts.repositorios;
+
+import com.microservicos.posts.modelos.entidades.EmpresaPost;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface EmpresaPostRepositorio extends JpaRepository<EmpresaPost,Long> {
+
+
+
+}
