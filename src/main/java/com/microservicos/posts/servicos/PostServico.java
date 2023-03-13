@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class PostServico {
@@ -26,5 +27,9 @@ public class PostServico {
 
     public void criarEmpresaPost(EmpresaPost empresaPost){
         empresaPostRepositorio.save(empresaPost);
+    }
+
+    public List<Post> todosPosts(){
+        return postRepositorio.findAll();
     }
 }
