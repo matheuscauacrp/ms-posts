@@ -20,6 +20,7 @@ public class PostServico {
 
     public void criarPost(Post post){
         post.setDataCadastro(new Date());
+        post.setDataExpiracao(new Date());
         postRepositorio.save(post);
     }
 

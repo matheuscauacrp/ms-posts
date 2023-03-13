@@ -1,5 +1,6 @@
 package com.microservicos.posts.modelos.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -10,6 +11,7 @@ import java.util.Date;
 public class Post {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String titulo;
@@ -22,5 +24,5 @@ public class Post {
     private Date dataExpiracao;
 
     @ManyToOne
-    private EmpresaPost empresaPost;
+    private EmpresaPost empresa;
 }
