@@ -16,7 +16,7 @@ public class EmpresaPost {
 
     private String nome;
 
-    private boolean situacao;
+    private String situacao;
 
     @JsonIgnore
     @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
